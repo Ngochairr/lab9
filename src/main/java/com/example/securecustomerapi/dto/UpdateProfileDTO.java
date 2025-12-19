@@ -1,0 +1,30 @@
+package com.example.securecustomerapi.dto;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+public class UpdateProfileDTO {
+
+    @NotBlank(message = "Full name cannot be blank")
+    private String fullName;
+
+    @Email(message = "Invalid email")
+    private String email;
+
+    // Getters and Setters
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}
